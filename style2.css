@@ -1,0 +1,65 @@
+body {
+    background-image: url(background2.jpeg);
+    background-color: #000; /* A deep black base color for a space-like feel */
+    color: white; /* Ensures text is visible on the dark background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 100px 0 0 100px;
+    width: 90%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container img {
+    width: 10%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: all ease-in-out 0.5s;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1); /* Soft initial glow */
+}
+
+.container img:hover {
+    width: 25%;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Brighter glow on hover */
+}
+
+/* Adding a glow effect around the entire screen */
+body::before {
+    content: '';
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 70%);
+    z-index: -1;
+    pointer-events: none; /* Ensures the glow doesn't interfere with clicks */
+}
+.plan-header {
+    color: rgb(255, 105, 130); /* Sets the text color to pink */
+    text-align: center; /* Centers the text */
+    position: relative; /* Necessary for positioning the underline */
+    font-size: 2.5em; /* Adjust font size as needed */
+    font-weight: bold; /* Makes the text bold */
+    margin-bottom: 20px; /* Adds space below the text */
+}
+
+.plan-header::after {
+    content: '';
+    display: block;
+    width: 350px; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background-color: rgb(255, 108, 132); /* Color of the underline */
+    margin: 0 auto; /* Centers the underline */
+    position: absolute;
+    left: 50%;
+    bottom: -10px; /* Position the underline below the text */
+    transform: translateX(-50%); /* Adjusts position to center the underline */
+    border-radius: 2px; /* Slightly rounds the edges of the underline */
+}

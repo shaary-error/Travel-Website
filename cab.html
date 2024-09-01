@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourist Cab Booking</title>
+    <link rel="stylesheet" href="cab.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Explore with Ease</h1>
+            <p>Your adventure starts here. Book a cab to your destination!</p>
+        </header>
+        <form id="cab-form">
+            <div class="form-group">
+                <label for="pickup">Pickup Location</label>
+                <input type="text" id="pickup" placeholder="Enter your pickup location" required>
+            </div>
+            <div class="form-group">
+                <label for="dropoff">Dropoff Location</label>
+                <input type="text" id="dropoff" placeholder="Enter your dropoff location" required>
+            </div>
+            <button type="submit">Book Your Cab</button>
+        </form>
+        <div id="confirmation" class="confirmation"></div>
+    </div>
+
+    <script src="cab.js"></script>
+</body>
+</html>

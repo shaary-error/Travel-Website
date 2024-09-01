@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Train Booking System</title>
+    <link rel="stylesheet" href="train.css">
+</head>
+<body>
+    <header>
+        <h1>Train Booking System</h1>
+    </header>
+    
+    <main>
+        <section id="train-section">
+            <h2>Available Trains</h2>
+            <table id="train-table">
+                <thead>
+                    <tr>
+                        <th>Train ID</th>
+                        <th>Destination</th>
+                        <th>Available Seats</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <section id="booking-section">
+            <h2>Book a Ticket</h2>
+            <form id="booking-form">
+                <label for="train-id">Train ID:</label>
+                <input type="text" id="train-id" required>
+
+                <label for="num-seats">Number of Seats:</label>
+                <input type="number" id="num-seats" min="1" required>
+
+                <button type="submit"><a href="payment.html">Book Ticket</a></button>
+                <p id="form-message"></p>
+            </form>
+        </section>
+
+        <section id="bookings-section">
+            <h2>Current Bookings</h2>
+            <table id="bookings-table">
+                <thead>
+                    <tr>
+                        <th>Train ID</th>
+                        <th>Seats Booked</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="train.js"></script>
+</body>
+</html> 

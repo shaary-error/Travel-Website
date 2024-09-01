@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .price {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .scanner {
+            width: 300px;
+            height: 300px;
+            background-color: #fff;
+            border: 2px solid #333;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>Complete Your Payment</h1>
+    <p class="price">Total Price: INR 1807</p>
+    
+    <div class="scanner">
+        <img src="qr.jpeg" alt="Payment QR Code">
+    </div>
+
+    <p class="note">Scan the QR code with your payment app to complete the payment.</p>
+</body>
+</html>

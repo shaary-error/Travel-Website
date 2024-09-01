@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            margin: 20px 0;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin: 20px 0;
+            background: #e7f1ff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hotel Booking</h1>
+    <div class="container">
+        <form id="bookingForm">
+            <label for="checkinDate">Check-in Date:</label>
+            <input type="date" id="checkinDate" name="checkinDate" required>
+
+            <label for="checkoutDate">Check-out Date:</label>
+            <input type="date" id="checkoutDate" name="checkoutDate" required>
+
+            <label for="roomType">Room Type:</label>
+            <select id="roomType" name="roomType" required>
+                <option value="">Select Room Type</option>
+                <option value="single">Single Room</option>
+                <option value="double">Double Room</option>
+                <option value="suite">Suite</option>
+            </select>
+
+            <label for="guestName">Guest Name:</label>
+            <input type="text" id="guestName" name="guestName" placeholder="Enter your name" required>
+
+            <label for="guestEmail">Email Address:</label>
+            <input type="email" id="guestEmail" name="guestEmail" placeholder="Enter your email" required>
+
+            <label for="guestPhone">Phone Number:</label>
+            <input type="tel" id="guestPhone" name="guestPhone" placeholder="Enter your phone number" required>
+
+            <label for="specialRequests">Special Requests:</label>
+            <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Any special requests or requirements"></textarea>
+
+            <button type="submit">Book Now</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const checkinDate = document.getElementById('checkinDate').value;
+            const checkoutDate = document.getElementById('checkoutDate').value;
+            const roomType = document.getElementById('roomType').value;
+            const guestName = document.getElementById('guestName').value;
+            const guestEmail = document.getElementById('guestEmail').value;
+            const guestPhone = document.getElementById('guestPhone').value;
+            const specialRequests = document.getElementById('specialRequests').value;
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <h2>Booking Confirmation</h2>
+                <p><strong>Check-in Date:</strong> ${checkinDate}</p>
+                <p><strong>Check-out Date:</strong> ${checkoutDate}</p>
+                <p><strong>Room Type:</strong> ${roomType}</p>
+                <p><strong>Guest Name:</strong> ${guestName}</p>
+                <p><strong>Email Address:</strong> ${guestEmail}</p>
+                <p><strong>Phone Number:</strong> ${guestPhone}</p>
+                <p><strong>Special Requests:</strong> ${specialRequests}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

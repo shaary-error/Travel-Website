@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking</title>
+    <link rel="stylesheet" href="bus.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h1>Book Your Bus Trip</h1>
+        <form id="bookingForm">
+            <div class="input-group">
+                <label for="from">From</label>
+                <input type="text" id="from" name="from" placeholder="City or Location" required>
+            </div>
+            <div class="input-group">
+                <label for="to">To</label>
+                <input type="text" id="to" name="to" placeholder="City or Location" required>
+            </div>
+            <div class="input-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+            </div>
+            <div class="input-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+            </div>
+            <div class="input-group">
+                <label for="passengers">Number of Passengers</label>
+                <input type="number" id="passengers" name="passengers" min="1" required>
+            </div>
+            <button type="submit">Book Now</button>
+        </form>
+        <div id="confirmation" class="hidden">
+            <h2>Booking Confirmed!</h2>
+            <p id="confirmationDetails"></p>
+        </div>
+    </div>
+    <script src="bus.js"></script>
+</body>
+</html> 
